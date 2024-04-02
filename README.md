@@ -1,4 +1,4 @@
-# Playwright API Automation
+# Playwright API Regression Automation
 
 This automation will carry out various API requests, passing data where appropriate and asserting expected responses.
 
