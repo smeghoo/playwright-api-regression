@@ -9,3 +9,5 @@ This automation will carry out various API requests, passing data where appropri
 2. From the root of the project folder run `npm install` - this should install all necessary dependencies
 
 3. To run all tests use `npm run tests:api`
+
+Reporter : testomatio
