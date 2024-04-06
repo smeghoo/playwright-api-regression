@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tests:api": "set TESTOMATIO=tstmt_nbDAphhicqDWIeT5NIhPAywWf-JVUjUNrg1709306516 && npx playwright test --config=api.config.ts"
+    "tests:api": "TESTOMATIO=$TESTOMATIO && npx playwright test --config=api.config.ts"
   },
   "keywords": [],
   "author": "",

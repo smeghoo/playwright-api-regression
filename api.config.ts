@@ -23,7 +23,7 @@ export default defineConfig({
   reporter: [
     // ...
     ['./node_modules/@testomatio/reporter/lib/adapter/playwright.js', {
-      apiKey: 'tstmt_nbDAphhicqDWIeT5NIhPAywWf-JVUjUNrg1709306516', //process.env.TESTOMATIO
+      apiKey: process.env.TESTOMATIO,//'tstmt_nbDAphhicqDWIeT5NIhPAywWf-JVUjUNrg1709306516',
     }]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
