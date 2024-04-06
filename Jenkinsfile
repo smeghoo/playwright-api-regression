@@ -17,10 +17,15 @@ stages {
             sh 'npm install'
         }
     }
+    stage('Set Logging'){
+        steps{
+            sh 'rm node_modules/@testomatio/reporter/lib/adapter/playwright.js'
+            sh 'mv playwright.js node_modules/@testomatio/reporter/lib/adapter/playwright.js'
+        }
+    }
     stage('Api Tests'){
         steps{   
             catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-              sh 'echo $TESTOMATIO'
               sh 'npm run tests:api'
         }
     }
@@ -30,7 +35,7 @@ stages {
         echo 'Testing...'
         snykSecurity(
           snykInstallation: 'snyk@latest',
-          snykTokenId: 'snyk-synapsis',
+          snykTokenId: 'snyk-personal',
         )
       }
     }
