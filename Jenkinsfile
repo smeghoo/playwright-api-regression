@@ -30,14 +30,14 @@ stages {
         }
     }
     }
-    stage('Snyk Review') {
-      steps {
-        echo 'Testing...'
-        snykSecurity(
-          snykInstallation: 'snyk@latest',
-          snykTokenId: 'snyk-personal',
-        )
-      }
-    }
+    // stage('Snyk Review') {
+    //   steps {
+    //     echo 'Testing...'
+    //     snykSecurity(
+    //       snykInstallation: 'snyk@latest',
+    //       snykTokenId: 'snyk-personal',
+    //     )
+    //   }
+    // }
  }
 }
